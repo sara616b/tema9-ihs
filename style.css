@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 1000px;
+    margin: auto;
+}
+
+
+/*__________navigation________________*/
+
+
+nav img {
+    width: 100px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+nav a,
+nav div {
+    color: black;
+    padding: 60px 0 20px 0;
+    font-family: sans-serif;
+    text-decoration: none;
+}
+
+nav a:first-child {
+    padding: 20px 0;
+}
+
+/*___________splash (forside)_________*/
+
+#splash {
+    width: 100%;
+    height: 300px;
+    background-size: cover;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+}
+
+#splash #info {
+    background-color: #0b1d42;
+    color: white;
+    opacity: 0.8;
+    height: 90%;
+    width: 50%;
+    padding: 40px;
+    margin: 40px;
+    text-align: center;
+
+}
