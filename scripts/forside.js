@@ -14,14 +14,16 @@ async function hentData() {
     vis(json);
 }
 
+//Indsætter data fra wordpress på rette pladser på forsiden
 function vis(data) {
     console.log("vis");
 
-    //TODO - opsæt mulighed for billeder og tekstfelter i wordpress og definer dem her
+    //TODO - ret billeder og tekstfelter i wordpress og definer dem her
     document.querySelector("#splash").style.backgroundImage = "url(" + data.splashbillede.guid + ")";
     document.querySelector("#info").innerHTML = "<p>" + data.splashtext + "</p>";
 
+    //sætter tre ikoner fra forside-page på index.html
+    document.querySelector("#forside").innerHTML =
+        "<img src='" + data.ikoner[0].guid + "' alt='ikoner'>" + "<img src='" + data.ikoner[1].guid + "' alt='ikoner'>" + "<img src='" + data.ikoner[2].guid + "' alt='ikoner'>"
 
-    //sætter generel html fra forside-page på index.html
-    document.querySelector("#forside").innerHTML = data.content.rendered;
 }
