@@ -8,9 +8,25 @@ body {
     margin: auto;
 }
 
+main {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-areas:
+        "header header header header"
+        "splash splash splash splash"
+        "main main main main"
+        "social social social social"
+        "footer footer footer footer";
+    grid-gap: 10px;
+}
+
 
 /*__________navigation________________*/
 
+header {
+    grid-area: header;
+}
 
 nav img {
     width: 100px;
@@ -37,6 +53,7 @@ nav a:first-child {
 /*___________splash (forside)_________*/
 
 #splash {
+    grid-area: splash;
     width: 100%;
     height: 300px;
     background-size: cover;
@@ -55,4 +72,21 @@ nav a:first-child {
     margin: 40px;
     text-align: center;
 
+}
+
+/*____________forside-indhold_________*/
+
+#forside {
+    grid-area: main;
+}
+
+/*-----------sociale medielinks og footer-----------------*/
+
+#sociale {
+    grid-area: social;
+    background-color: #47ab48;
+}
+
+footer {
+    grid-area: footer
 }
