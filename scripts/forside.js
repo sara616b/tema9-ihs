@@ -20,7 +20,7 @@ function vis(data) {
 
     //TODO - ret billeder og tekstfelter i wordpress og definer dem her
     document.querySelector("#splash").style.backgroundImage = "url(" + data.splashbillede.guid + ")";
-    document.querySelector("#info").innerHTML = "<p>" + data.splashtext + "</p>";
+    document.querySelector("#info").innerHTML = data.content.rendered + "<button><a href='" + "tilmelding.html" + "'> Tilmeld dig her </a></button>";
 
     //sætter tre ikoner fra forside-page på index.html
     document.querySelector("#forside").innerHTML =
