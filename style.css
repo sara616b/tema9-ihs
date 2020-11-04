@@ -24,6 +24,7 @@ main {
 .hidden {
     height: 0;
     visibility: hidden;
+    display: none;
 }
 
 header {
@@ -46,7 +47,8 @@ nav {
 nav a,
 header nav a:first-child,
 nav div,
-#menuknap {
+#menuknap,
+nav div a {
     color: white;
     padding: 10px;
     text-decoration: none;
@@ -74,6 +76,40 @@ nav div img {
     margin: 0 0 0 10px;
 }
 
+/*___dropdownmenu______*/
+
+nav #dropdown_fag {
+    display: none;
+    color: white;
+    padding-left: 20px;
+    margin: 0;
+}
+
+#dropdown_linje {
+    margin: 0;
+    height: 40px;
+    padding-top: 0;
+}
+
+nav div #dropdown_button {
+    background-color: #47ab48;
+    color: white;
+    padding: 5px;
+    margin: 0;
+    border: none;
+    height: 43px;
+}
+
+nav #dropdown_fag a,
+nav #dropdown_fag a:first-child {
+    font-size: 0.8rem;
+    color: white;
+    padding: 5px;
+    justify-content: flex-start;
+    cursor: pointer;
+    font-family: sans-serif;
+    background-color: #348934;
+}
 
 /*__________search bar --KODE FRA https://www.w3schools.com/howto/howto_css_searchbar.asp________________*/
 /* Add a black background color to the top navigation bar */
@@ -93,17 +129,11 @@ nav div input {
 nav div a {
     float: left;
     display: block;
-    color: black;
+    color: white;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
-}
-
-/* Change the color of links on hover */
-nav div a:hover {
-    background-color: #ddd;
-    color: black;
 }
 
 /* Style the "active" element to highlight the current page */
@@ -404,8 +434,20 @@ footer button {
         padding: 20px 20px 20px 0;
     }
 
-    #menuknap {
+    #menuknap,
+    #dropdown_button {
         visibility: hidden;
+        display: none;
+    }
+
+    #dropdown_linje {
+        height: auto;
+        position: relative;
+        display: inline-block;
+    }
+
+    #dropdown_linje a:hover {
+        display: block;
     }
 
     nav img {
@@ -415,6 +457,7 @@ footer button {
     .hidden {
         height: auto;
         visibility: visible;
+        display: flex;
     }
 
     nav {
@@ -427,7 +470,8 @@ footer button {
     nav a,
     header nav a:first-child,
     nav div,
-    #menuknap {
+    #menuknap,
+    nav div a {
         color: black;
         padding: 60px 0 20px 0;
         font-family: sans-serif;
