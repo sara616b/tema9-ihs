@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", hentData);
 
 let template = document.querySelector("template");
 let fag;
-let container = document.querySelector("#content");
+let container = document.querySelector("#fag-content");
 
 
 //Henter json data og starter højskole-siden (async for at få loadet json før man går videre)
@@ -50,9 +50,10 @@ async function filterContent() {
         if (fag.kategori == "Specialefag") {
             const klon = template.cloneNode(true).content;
             klon.querySelector("h2").textContent = fag.title.rendered;
+            klon.querySelector("p").textContent = fag.kortintro;
+            klon.querySelector(".fagelement").style.backgroundImage = "url(" + fag.billede.guid + ")";
             container.appendChild(klon);
             console.log("appendChild");
         }
     })
 }
-

@@ -189,7 +189,7 @@ nav div input[type=text] {
 #splash #title {
     background-color: #0b1d42;
     color: white;
-    opacity: 0.8;
+    opacity: 0.95;
     height: 90%;
     width: auto;
     padding: 40px;
@@ -213,15 +213,18 @@ nav div input[type=text] {
 }
 
 button {
-    color: black;
+    color: #555555;
+    background-color: white;
     padding: 20px;
     margin: 20px 20px 0 20px;
     font-size: 1rem;
     text-transform: uppercase;
+    border: solid lightgray 2px;
+    cursor: pointer;
 }
 
 button a {
-    color: black;
+    color: #555555;
     text-decoration: none;
     font-weight: bold;
 }
@@ -307,6 +310,49 @@ button a {
     padding: 10px;
 }
 
+/*-------------specialfag-------------------------------*/
+#fag-content {
+    grid-row: 3/4;
+    grid-column: 1/5;
+    padding: 0;
+    background-color: #0b1d42;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-around;
+    color: white;
+    font-family: sans-serif;
+}
+
+.fagelement {
+    padding: 20px;
+    background-size: cover;
+}
+
+.fagartikel p,
+.fagartikel h2 {
+    padding: 5px 20px;
+    max-width: 450px;
+    line-height: 1.8rem;
+    font-weight: lighter;
+}
+
+.fagartikel h2 {
+    font-weight: bold;
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+.fagartikel button {
+    font-weight: bold;
+    color: #555555;
+    background-color: white;
+    border: none;
+}
+
+.fagartikel button:hover {
+    opacity: 0.8;
+}
 
 /*-----------sociale medielinks og footer-----------------*/
 
