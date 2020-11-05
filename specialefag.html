@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noindex">
-    <title>IHS - Idrætshøjskolen Sønderborg</title>
+    <title>Specialefag - Idrætshøjskolen Sønderborg</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://use.typekit.net/vfi4vcm.css">
 </head>
@@ -22,7 +22,7 @@
                     <a href="hojskole.html"> Højskole</a>
                 </div>
                 <div id="dropdown_fag" class="hidden">
-                    <a href="#">Specialefag</a>
+                    <a href="specialefag.html">Specialefag</a>
                     <a href="#">Idrætsfag</a>
                     <a href="#">Almene fag</a>
                     <a href="#">Interessefag</a>
@@ -44,15 +44,23 @@
         </header>
 
         <!--splashsektion med billede og intro-->
-        <section id="splash">
-            <div id="info">
-
-
-            </div>
+        <section id="splash" style="min-height: 327px">
+            <h1 id="title">
+            </h1>
         </section>
 
-        <!--afsnit på forsiden hvor html fra wordpress page bliver sat ind-->
-        <section id="forside"></section>
+        <section id="content" style="display: flex;flex-direction: column;">
+
+        </section>
+
+        <!--template til hvert fag-->
+        <template>
+            <article class="fagartikel">
+                <h2 style="color: white;"></h2>
+                <p></p>
+            </article>
+        </template>
+
 
         <!--sociale medie links her-->
         <section id="sociale">
@@ -92,7 +100,7 @@
         </footer>
 
         <!--script der henter og sætter json data fra wordpress-->
-        <script src="scripts/forside.js"></script>
+        <script src="scripts/specialefag.js"></script>
         <!--script der får burgermenu til at virke-->
         <script src="scripts/menu.js"></script>
     </main>

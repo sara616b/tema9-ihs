@@ -410,9 +410,20 @@ footer .right_footer2 {
     flex-direction: column;
 }
 
+/*____logo i footer______*/
 footer img {
-    height: 60px;
+    height: 80px;
+    width: 100px;
+    margin: auto;
+    padding-bottom: 10px;
+}
+
+/*_____en del af højskolerne-billedet__*/
+footer .right_footer1 img {
+    height: 40px;
     width: auto;
+    margin: auto;
+    padding-bottom: 10px;
 }
 
 footer button {
