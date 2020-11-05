@@ -11,22 +11,35 @@
 
 <body>
     <header>
-        <!--Globalmenu/topmenu-->
-        <a href="index.html"><img src="assets/imgs/kage(15).jpg" alt="logo for idrætshøjskolen Sønderborg"></a>
-        <div id="menuknap">=</div>
-        <nav id="menu" class="hidden">
-            <a href="hojskole.html">Højskole</a>
-            <a href="ugekurser.html">Ugekurser</a>
-            <a href="erhverv.html">Erhverv</a>
-            <a href="om_ihs.html">Om IHS</a>
-            <a href="tilmelding.html">Tilmelding</a>
-            <div>
-                <input type="text" placeholder="Søg..">
-                <img src="assets/imgs/kage(15).jpg" alt="">
-            </div>
-        </nav>
+            <!--Globalmenu/topmenu-->
+            <a href="index.html"><img src="assets/imgs/logo_ihs.png" alt="logo for idrætshøjskolen Sønderborg"></a>
+            <div id="menuknap">=</div>
+            <nav id="menu" class="hidden">
+                <div id="dropdown_linje">
+                    <button id="dropdown_button">=</button>
+                    <a href="hojskole.html"> Højskole</a>
+                </div>
+                <div id="dropdown_fag" class="hidden">
+                    <a href="#">Specialefag</a>
+                    <a href="#">Idrætsfag</a>
+                    <a href="#">Almene fag</a>
+                    <a href="#">Interessefag</a>
+                    <a href="#">Fælles fag</a>
+                    <a href="#">Rejser</a>
+                    <a href="#">Linjer og Kurser</a>
+                    <a href="#">Priser</a>
+                </div>
+                <a href="ugekurser.html">Ugekurser</a>
+                <a href="erhverv.html">Erhverv</a>
+                <a href="om_ihs.html">Om IHS</a>
+                <a href="tilmelding.html">Tilmelding</a>
+                <div>
+                    <input type="text" placeholder="Søg..">
+                    <img src="assets/imgs/kage(15).jpg" alt="">
+                </div>
+            </nav>
 
-    </header>
+        </header>
 
     <!--sociale medie links her-->
     <!--sociale medie links her-->
@@ -65,6 +78,9 @@
 
     </footer>
     <script src=""></script>
+
+        <!--script der får burgermenu til at virke-->
+        <script src="scripts/menu.js"></script>
 </body>
 
 </html>
