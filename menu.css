@@ -1,0 +1,140 @@
+body {
+    max-width: 1000px;
+    margin: auto;
+}
+
+.hidden {
+    visibility: visible;
+    display: none;
+}
+
+/*header {
+    grid-column: 1/5;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}*/
+
+header {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+nav a,
+#menuknap,
+nav button,
+#menu {
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+    background-color: #47ab48;
+    justify-content: flex-start;
+    cursor: pointer;
+    font-family: sans-serif;
+    border: none;
+}
+
+nav button,
+#menuknap {
+    font-weight: bold;
+}
+
+#logo_top {
+    background-color: white;
+    margin: auto;
+    padding: 20px 0;
+}
+
+header img {
+    width: 100px;
+    height: auto;
+}
+
+nav div img {
+    width: 34px;
+    height: 34px;
+    margin: 0 0 0 10px;
+}
+
+header nav {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+}
+
+header nav #dropdown {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    padding: 10px;
+}
+
+header nav .dropdown_fag {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    padding-left: 20px;
+    background-color: green;
+    font-size: 0.8rem;
+}
+
+/*___search bar___*/
+nav div input[type=text] {
+    padding: 6px;
+    border: solid 2px #dbdbdb;
+    margin: 0 1px;
+    font-size: 17px;
+    width: 100px;
+}
+
+
+@media only screen and (min-width: 800px) {
+
+    .hidden {
+        visibility: visible;
+        display: flex;
+    }
+
+    #menuknap,
+    #dropdown_button {
+        display: none;
+    }
+
+    header {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        width: 100%;
+    }
+
+    header nav {
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    nav,
+    nav a,
+    #menu {
+        background-color: white;
+        color: black;
+        align-items: flex-end;
+        justify-content: space-between;
+    }
+
+    .dropdown_fag {
+        display: flex;
+        visibility: hidden;
+        position: absolute;
+    }
+
+    #hojskole_menu:hover ~ .dropdown_fag {
+        visibility: visible;
+    }
+
+    .dropdown_fag:hover {
+        visibility: visible;
+    }
+}

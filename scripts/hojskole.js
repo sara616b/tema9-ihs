@@ -29,7 +29,11 @@ function vis(data) {
     document.querySelector("#right").innerHTML = "<img src='" + data.video.guid + "' alt=''>";
 
     //ikoner om fag
-    document.querySelector("#fagikoner").innerHTML = "<a href='specialefag.html'><img src='" + data.ikoner[0].guid + "' alt='ikoner'></a>" + "<img src='" + data.ikoner[1].guid + "' alt='ikoner'>" + "<img src='" + data.ikoner[2].guid + "' alt='ikoner'>" + "<img src='" + data.ikoner[3].guid + "' alt='ikoner'>" + "<img src='" + data.ikoner[4].guid + "' alt='ikoner'>";
+    document.querySelector("#fagikoner").innerHTML = "<a href='specialefag.html'><img src='" + data.ikoner[0].guid + "' alt='ikoner'></a>" +
+        "<a href='idraetsfag.html'><img src='" + data.ikoner[1].guid + "' alt='ikoner'></a>" +
+        "<a href='almenefag.html'><img src='" + data.ikoner[2].guid + "' alt='ikoner'></a>" +
+        "<a href='interessefag.html'><img src='" + data.ikoner[3].guid + "' alt='ikoner'></a>" +
+        "<a href='faellesfag.html'><img src='" + data.ikoner[4].guid + "' alt='ikoner'></a>";
 
     //ikoner om 'mere'
     document.querySelector("#moreikoner").innerHTML = "<img src='" + data.ikoneranden[0].guid + "' alt='ikoner'>" + "<a href='tilmelding.html'><img src='" + data.ikoneranden[1].guid + "' alt='ikoner'></a>" + "<img src='" + data.ikoneranden[2].guid + "' alt='ikoner'>";

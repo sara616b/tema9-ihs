@@ -25,15 +25,15 @@ function toggleMenu() {
 //får dropdown i burger til at åbne og lukke
 function toggleDropdown() {
     console.log("toggleDropdown");
-    document.querySelector("#dropdown_fag").classList.toggle("hidden");
+    document.querySelector(".dropdown_fag").classList.toggle("hidden");
 
     document.querySelector("#dropdown_button").textContent = "=";
 
-    if (document.querySelector("#dropdown_fag").classList.contains("hidden")) {
+    if (document.querySelector(".dropdown_fag").classList.contains("hidden")) {
         document.querySelector("#dropdown_button").textContent = "=";
-        document.querySelector("#dropdown_fag").style.display = "none";
+        document.querySelector(".dropdown_fag").style.display = "none";
     } else {
         document.querySelector("#dropdown_button").textContent = "X";
-        document.querySelector("#dropdown_fag").style.display = "block";
+        document.querySelector(".dropdown_fag").style.display = "flex";
     }
 }

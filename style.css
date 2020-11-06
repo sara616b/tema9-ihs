@@ -21,34 +21,23 @@ main {
 
 /*__________header og navigation________________*/
 
+
 .hidden {
-    height: 0;
-    visibility: hidden;
+    visibility: visible;
     display: none;
 }
 
 header {
+    display: flex;
     grid-column: 1/5;
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
-}
-
-header img {
-    width: 100px;
-}
-
-nav {
-    display: flex;
     justify-content: flex-start;
     flex-direction: column;
 }
 
 nav a,
-header nav a:first-child,
-nav div,
 #menuknap,
-nav div a {
+nav button,
+#menu {
     color: white;
     padding: 10px;
     text-decoration: none;
@@ -57,17 +46,28 @@ nav div a {
     justify-content: flex-start;
     cursor: pointer;
     font-family: sans-serif;
+    border: none;
 }
 
+#dropdown_button {
+    margin: 0;
+    padding: 0;
+}
+
+nav button,
 #menuknap {
     font-weight: bold;
 }
 
-header a:first-child {
-    display: flex;
-    justify-content: center;
+#logo_top {
     background-color: white;
+    margin: auto;
     padding: 20px 0;
+}
+
+header img {
+    width: 120px;
+    height: auto;
 }
 
 nav div img {
@@ -76,100 +76,98 @@ nav div img {
     margin: 0 0 0 10px;
 }
 
-/*___dropdownmenu______*/
-
-nav #dropdown_fag {
-    display: none;
-    color: white;
-    padding-left: 20px;
-    margin: 0;
-}
-
-#dropdown_linje {
-    margin: 0;
-    height: 40px;
-    padding-top: 0;
-}
-
-nav div #dropdown_button {
-    background-color: #47ab48;
-    color: white;
-    padding: 5px;
-    margin: 0;
-    border: none;
-    height: 43px;
-}
-
-nav #dropdown_fag a,
-nav #dropdown_fag a:first-child {
-    font-size: 0.8rem;
-    color: white;
-    padding: 5px;
-    justify-content: flex-start;
-    cursor: pointer;
-    font-family: sans-serif;
-    background-color: #348934;
-}
-
-/*__________search bar --KODE FRA https://www.w3schools.com/howto/howto_css_searchbar.asp________________*/
-/* Add a black background color to the top navigation bar */
-nav div {
+header nav {
     display: flex;
-    flex-direction: row;
-    overflow: hidden;
-    margin: -5px 0 5px 0;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
 }
 
-nav div input {
-    width: 125px;
-    outline: solid lightgray 1px;
+header nav #dropdown {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    padding: 10px;
 }
 
-/* Style the links inside the navigation bar */
-nav div a {
-    float: left;
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
+header nav .dropdown_fag {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    padding-left: 15px;
+    background-color: green;
+    font-size: 0.8rem;
 }
 
-/* Style the "active" element to highlight the current page */
-nav div a.active {
-    background-color: #2196F3;
-    color: white;
-}
-
-/* Style the search box inside the navigation bar */
+/*___search bar___*/
 nav div input[type=text] {
-    float: right;
     padding: 6px;
-    border: none;
+    border: solid 2px #dbdbdb;
     margin: 0 1px;
     font-size: 17px;
+    width: 100px;
 }
 
-/* When the screen is less than 600px wide, stack the links and the search field vertically instead of horizontally */
-@media screen and (max-width: 600px) {
 
-    nav div a,
-    .topnav input[type=text] {
-        float: none;
-        display: block;
-        text-align: left;
+@media only screen and (min-width: 800px) {
+
+    .hidden {
+        visibility: visible;
+        display: flex;
+    }
+
+    #menuknap,
+    #dropdown_button {
+        display: none;
+    }
+
+    header {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
         width: 100%;
-        margin: 0;
-        padding: 14px;
     }
 
-    nav div input[type=text] {
-        border: 1px solid #ccc;
+    .dropdown_fag .dropfag {
+        padding: 10px;
+    }
+
+    .dropdown_fag {
+        padding: 0;
+    }
+
+    header nav {
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    nav,
+    nav a,
+    #menu {
+        background-color: white;
+        color: black;
+        align-items: flex-end;
+        justify-content: space-between;
+    }
+
+    header nav #dropdown {
+        padding: 0 10px;
+    }
+
+    .dropdown_fag {
+        display: flex;
+        visibility: hidden;
+        position: absolute;
+    }
+
+    #hojskole_menu:hover ~ .dropdown_fag {
+        visibility: visible;
+    }
+
+    .dropdown_fag:hover {
+        visibility: visible;
     }
 }
-
-/*________slut med kode fra w3school_______*/
 
 
 
@@ -503,19 +501,19 @@ footer button {
         display: inline-block;
     }
 
-    #dropdown_linje a:hover {
-        display: block;
-    }
+    /*  #dropdown_linje a:hover {
+      display: block;
+  }*/
 
     nav img {
         width: 100px;
     }
 
-    .hidden {
-        height: auto;
-        visibility: visible;
-        display: flex;
-    }
+    /*.hidden {
+    height: auto;
+    visibility: visible;
+    display: flex;
+}*/
 
     nav {
         display: flex;
@@ -599,6 +597,10 @@ footer button {
         justify-content: center;
         flex-direction: column;
     }
+
+    /*_________forsøg på at få dropdown til at fungerer!!!!____*/
+
+
 }
 
 

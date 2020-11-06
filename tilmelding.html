@@ -12,33 +12,36 @@
 <body>
     <header>
             <!--Globalmenu/topmenu-->
-            <a href="index.html"><img src="assets/imgs/logo_ihs.png" alt="logo for idrætshøjskolen Sønderborg"></a>
+            <a id="logo_top" href="index.html"><img src="assets/imgs/logo_ihs.png" alt="logo for idrætshøjskolen Sønderborg"></a>
             <div id="menuknap">=</div>
             <nav id="menu" class="hidden">
-                <div id="dropdown_linje">
-                    <button id="dropdown_button">=</button>
-                    <a href="hojskole.html"> Højskole</a>
+                <div id="dropdown" class="hidden">
+                    <div class="dropdown_linje">
+                        <button id="dropdown_button">=</button>
+                        <a id="hojskole_menu" href="hojskole.html"> Højskole</a>
+                        <div class="dropdown_fag hidden">
+                            <a class="dropfag" href="specialefag.html">Specialefag</a>
+                            <a class="dropfag" href="idraetsfag.html">Idrætsfag</a>
+                            <a class="dropfag" href="almenefag.html">Almene fag</a>
+                            <a class="dropfag" href="interessefag.html">Interessefag</a>
+                            <a class="dropfag" href="faellesfag.html">Fælles fag</a>
+                            <a class="dropfag" href="#">Rejser</a>
+                            <a class="dropfag" href="#">Linjer og Kurser</a>
+                            <a class="dropfag" href="#">Priser</a>
+                        </div>
+                    </div>
+
                 </div>
-                <div id="dropdown_fag" class="hidden">
-                    <a href="#">Specialefag</a>
-                    <a href="#">Idrætsfag</a>
-                    <a href="#">Almene fag</a>
-                    <a href="#">Interessefag</a>
-                    <a href="#">Fælles fag</a>
-                    <a href="#">Rejser</a>
-                    <a href="#">Linjer og Kurser</a>
-                    <a href="#">Priser</a>
-                </div>
+
                 <a href="ugekurser.html">Ugekurser</a>
                 <a href="erhverv.html">Erhverv</a>
                 <a href="om_ihs.html">Om IHS</a>
                 <a href="tilmelding.html">Tilmelding</a>
-                <div>
+                <div style="display: flex;">
                     <input type="text" placeholder="Søg..">
                     <img src="assets/imgs/kage(15).jpg" alt="">
                 </div>
             </nav>
-
         </header>
 
     <!--sociale medie links her-->

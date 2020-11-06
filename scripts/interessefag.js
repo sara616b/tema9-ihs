@@ -1,3 +1,5 @@
+"use strict"
+
 document.addEventListener("DOMContentLoaded", hentData);
 
 let template = document.querySelector("template");
@@ -10,7 +12,7 @@ async function hentData() {
     console.log("hentData");
 
     //json link: https://sarahfrederiksen.dk/kea/2_semester/tema9/ihs/wordpress/wp-json/wp/v2/
-    const link = "https://sarahfrederiksen.dk/kea/2_semester/tema9/ihs/wordpress/wp-json/wp/v2/faggruppe/87"
+    const link = "https://sarahfrederiksen.dk/kea/2_semester/tema9/ihs/wordpress/wp-json/wp/v2/faggruppe/155"
     const respons = await fetch(link);
     const json = await respons.json();
 
@@ -45,7 +47,7 @@ async function filterContent() {
 
     //filtrer efter kategori og vis
     jsonfag.forEach((fag) => {
-        if (fag.kategori == "specialefag") {
+        if (fag.kategori == "idrætsfag") {
             const klon = template.cloneNode(true).content;
             klon.querySelector("h2").textContent = fag.title.rendered;
             klon.querySelector("p").textContent = fag.kortintro;

@@ -5,12 +5,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noindex">
-    <title>Erhverv | Idrætshøjskolen Sønderborg</title>
+    <title>Specialefag - Idrætshøjskolen Sønderborg</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.typekit.net/vfi4vcm.css">
 </head>
 
 <body>
-    <header>
+    <main id="container">
+        <header>
             <!--Globalmenu/topmenu-->
             <a id="logo_top" href="index.html"><img src="assets/imgs/logo_ihs.png" alt="logo for idrætshøjskolen Sønderborg"></a>
             <div id="menuknap">=</div>
@@ -20,11 +22,11 @@
                         <button id="dropdown_button">=</button>
                         <a id="hojskole_menu" href="hojskole.html"> Højskole</a>
                         <div class="dropdown_fag hidden">
-                            <a class="dropfag" href="specialefag.html">Specialefag</a>
-                            <a class="dropfag" href="idraetsfag.html">Idrætsfag</a>
-                            <a class="dropfag" href="almenefag.html">Almene fag</a>
-                            <a class="dropfag" href="interessefag.html">Interessefag</a>
-                            <a class="dropfag" href="faellesfag.html">Fælles fag</a>
+                            <a class="dropfag" href="#">Specialefag</a>
+                            <a class="dropfag" href="#">Idrætsfag</a>
+                            <a class="dropfag" href="#">Almene fag</a>
+                            <a class="dropfag" href="#">Interessefag</a>
+                            <a class="dropfag" href="#">Fælles fag</a>
                             <a class="dropfag" href="#">Rejser</a>
                             <a class="dropfag" href="#">Linjer og Kurser</a>
                             <a class="dropfag" href="#">Priser</a>
@@ -44,8 +46,29 @@
             </nav>
         </header>
 
-    <!--sociale medie links her-->
-         <!--sociale medie links her-->
+        <!--splashsektion med billede og intro-->
+        <section id="splash" style="min-height: 327px">
+            <h1 id="title">
+            </h1>
+        </section>
+
+        <section id="fag-content">
+
+        </section>
+
+        <!--template til hvert fag-->
+        <template>
+            <article class="fagartikel">
+                <div class="fagelement">
+                    <h2></h2>
+                    <p></p>
+                    <button>Læs mere her</button>
+                </div>
+            </article>
+        </template>
+
+
+        <!--sociale medie links her-->
         <section id="sociale">
             <p><span class="lang">Hold dig opdateret og følg med på...</span><span class="kort">Følg med på...</span></p>
             <a href="https://www.instagram.com/ihsdk/">
@@ -59,6 +82,7 @@
             </a>
 
         </section>
+
         <!--footer, der er delt op i tre kolloner-->
         <footer>
             <div class="left_footer">
@@ -71,19 +95,21 @@
             <div class="right_footer">
                 <div class="right_footer1">
                     <p>KONTAKT OS<br>(+45) 7442 1848<br>info@ihs.dk</p>
-                    <img src="assets/imgs/kage(15).jpg" alt="">
+                    <img src="assets/imgs/en_del_af_h%C3%B8jskolerne.png" alt="">
                 </div>
                 <div class="right_footer2">
-                    <img src="assets/imgs/kage(15).jpg" alt="">
+                    <img src="assets/imgs/logo_ihs.png" alt="">
                     <button><a href="tilmelding.html"> Tilmeld dig her </a></button>
                 </div>
             </div>
 
         </footer>
-    <script src=""></script>
 
+        <!--script der henter og sætter json data fra wordpress-->
+        <script src="scripts/idraetsfag.js"></script>
         <!--script der får burgermenu til at virke-->
         <script src="scripts/menu.js"></script>
+    </main>
 </body>
 
 </html>
