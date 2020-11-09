@@ -49,6 +49,10 @@ nav button,
     border: none;
 }
 
+nav a:hover {
+    opacity: 0.7;
+}
+
 #dropdown_button {
     margin: 0;
     padding: 0;
@@ -281,7 +285,8 @@ button a {
 }
 
 #content p {
-    line-height: 1.5rem;
+    line-height: 2rem;
+    padding-bottom: 15px;
 
 }
 
@@ -483,6 +488,7 @@ footer img {
     width: 100px;
     margin: auto;
     padding-bottom: 10px;
+    display: flex;
 }
 
 /*_____en del af højskolerne-billedet__*/
