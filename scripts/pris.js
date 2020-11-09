@@ -6,7 +6,7 @@ async function hentData() {
     console.log("hentData");
 
     //json link: https://sarahfrederiksen.dk/kea/2_semester/tema9/ihs/wordpress/wp-json/wp/v2/
-    const link = "https://sarahfrederiksen.dk/kea/2_semester/tema9/ihs/wordpress/wp-json/wp/v2/pages/8"
+    const link = "https://sarahfrederiksen.dk/kea/2_semester/tema9/ihs/wordpress/wp-json/wp/v2/pages/234"
     const respons = await fetch(link);
     const json = await respons.json();
 
@@ -19,11 +19,11 @@ function vis(data) {
     console.log("vis");
 
     //TODO - ret billeder og tekstfelter i wordpress og definer dem her
+
+    document.querySelector("h1").textContent = data.title.rendered;
     document.querySelector("#splash").style.backgroundImage = "url(" + data.splashbillede.guid + ")";
-    document.querySelector("#info").innerHTML = data.content.rendered + "<button><a href='" + "tilmelding.html" + "'> Tilmeld dig her </a></button>";
 
     //sætter tre ikoner fra forside-page på index.html
-    document.querySelector("#forside").innerHTML =
-        "<a href='om_ihs.html'><img src='" + data.ikoner[0].guid + "' alt='ikoner'></a>" + "<a href='https://www.google.com/maps?ll=54.898281,9.803&z=15&t=m&hl=da&gl=US&mapclient=embed&cid=6776185303333634501'><img src='" + data.ikoner[1].guid + "' alt='ikoner'></a>" + "<a href='tilmelding.html'><img src='" + data.ikoner[2].guid + "' alt='ikoner'></a>";
+    document.querySelector("#pris").innerHTML = data.content.rendered;
 
 }

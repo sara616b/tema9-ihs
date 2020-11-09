@@ -11,40 +11,33 @@
 
 <body>
     <header>
-            <!--Globalmenu/topmenu-->
-            <a id="logo_top" href="index.html"><img src="assets/imgs/logo_ihs.png" alt="logo for idrætshøjskolen Sønderborg"></a>
-            <div id="menuknap">=</div>
-            <nav id="menu" class="hidden">
-                <div id="dropdown" class="hidden">
-                    <div class="dropdown_linje">
-                        <button id="dropdown_button">=</button>
-                        <a id="hojskole_menu" href="hojskole.html"> Højskole</a>
-                        <div class="dropdown_fag hidden">
-                            <a class="dropfag" href="specialefag.html">Specialefag</a>
-                            <a class="dropfag" href="idraetsfag.html">Idrætsfag</a>
-                            <a class="dropfag" href="almenefag.html">Almene fag</a>
-                            <a class="dropfag" href="interessefag.html">Interessefag</a>
-                            <a class="dropfag" href="faellesfag.html">Fælles fag</a>
-                            <a class="dropfag" href="#">Rejser</a>
-                            <a class="dropfag" href="#">Linjer og Kurser</a>
-                            <a class="dropfag" href="#">Priser</a>
-                        </div>
-                    </div>
 
-                </div>
+    </header>
 
-                <a href="ugekurser.html">Ugekurser</a>
-                <a href="erhverv.html">Erhverv</a>
-                <a href="om_ihs.html">Om IHS</a>
-                <a href="tilmelding.html">Tilmelding</a>
-                <div style="display: flex;">
-                    <input type="text" placeholder="Søg..">
-                    <img src="assets/imgs/kage(15).jpg" alt="">
-                </div>
-            </nav>
-        </header>
+    <!--splashsektion med billede og intro-->
+    <section id="splash" style="min-height: 327px">
+        <h1 id="title">
+        </h1>
+    </section>
 
-    <!--sociale medie links her-->
+    <section id="content">
+
+    </section>
+
+    <!--template til hvert fag-->
+    <template>
+        <article class="fagartikel">
+            <div class="fagelement">
+                <h2></h2>
+                <p></p>
+                <button class="lukket">Læs mere her</button>
+
+            </div>
+            <div class="mere lukket" style="display: none;">
+            </div>
+        </article>
+    </template>
+
     <!--sociale medie links her-->
     <section id="sociale">
         <p><span class="lang">Hold dig opdateret og følg med på...</span><span class="kort">Følg med på...</span></p>
@@ -74,16 +67,23 @@
                 <img src="assets/imgs/kage(15).jpg" alt="">
             </div>
             <div class="right_footer2">
-                <img src="assets/imgs/kage(15).jpg" alt="">
-                <button><a href="tilmelding.html"> Tilmeld dig her </a></button>
-            </div>
+                    <a href="index.html"><img src="assets/imgs/logo_ihs.png" alt=""></a>
+                    <button><a href="tilmelding.html"> Tilmeld dig her </a></button>
+                </div>
         </div>
 
     </footer>
-    <script src=""></script>
+    <script src="scripts/om_ihs.js"></script>
 
-        <!--script der får burgermenu til at virke-->
-        <script src="scripts/menu.js"></script>
+    <!--script der får burgermenu til at virke-->
+    <script src="scripts/menu.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", (event) => {
+            document.querySelector("#om_menu").style.fontWeight = "bold";
+
+        });
+
+    </script>
 </body>
 
 </html>

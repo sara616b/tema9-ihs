@@ -13,37 +13,7 @@
 <body>
     <main id="container">
         <header>
-            <!--Globalmenu/topmenu-->
-            <a id="logo_top" href="index.html"><img src="assets/imgs/logo_ihs.png" alt="logo for idrætshøjskolen Sønderborg"></a>
-            <div id="menuknap">=</div>
-            <nav id="menu" class="hidden">
-                <div id="dropdown" class="hidden">
-                    <div class="dropdown_linje">
-                        <button id="dropdown_button">=</button>
-                        <a id="hojskole_menu" href="hojskole.html"> Højskole</a>
-                        <div class="dropdown_fag hidden">
-                            <a class="dropfag" href="#">Specialefag</a>
-                            <a class="dropfag" href="#">Idrætsfag</a>
-                            <a class="dropfag" href="#">Almene fag</a>
-                            <a class="dropfag" href="#">Interessefag</a>
-                            <a class="dropfag" href="#">Fælles fag</a>
-                            <a class="dropfag" href="#">Rejser</a>
-                            <a class="dropfag" href="#">Linjer og Kurser</a>
-                            <a class="dropfag" href="#">Priser</a>
-                        </div>
-                    </div>
 
-                </div>
-
-                <a href="ugekurser.html">Ugekurser</a>
-                <a href="erhverv.html">Erhverv</a>
-                <a href="om_ihs.html">Om IHS</a>
-                <a href="tilmelding.html">Tilmelding</a>
-                <div style="display: flex;">
-                    <input type="text" placeholder="Søg..">
-                    <img src="assets/imgs/kage(15).jpg" alt="">
-                </div>
-            </nav>
         </header>
 
         <!--splashsektion med billede og intro-->
@@ -62,7 +32,10 @@
                 <div class="fagelement">
                     <h2></h2>
                     <p></p>
-                    <button>Læs mere her</button>
+                    <button class="lukket">Læs mere her</button>
+
+                </div>
+                <div class="mere lukket" style="display: none;">
                 </div>
             </article>
         </template>
@@ -98,7 +71,7 @@
                     <img src="assets/imgs/en_del_af_h%C3%B8jskolerne.png" alt="">
                 </div>
                 <div class="right_footer2">
-                    <img src="assets/imgs/logo_ihs.png" alt="">
+                    <a href="index.html"><img src="assets/imgs/logo_ihs.png" alt=""></a>
                     <button><a href="tilmelding.html"> Tilmeld dig her </a></button>
                 </div>
             </div>
@@ -109,6 +82,13 @@
         <script src="scripts/idraetsfag.js"></script>
         <!--script der får burgermenu til at virke-->
         <script src="scripts/menu.js"></script>
+        <script>
+            document.addEventListener("DOMContentLoaded", (event) => {
+                document.querySelector("#idraet_menu").style.fontWeight = "bold";
+
+            });
+
+        </script>
     </main>
 </body>
 

@@ -52,8 +52,28 @@ async function filterContent() {
             klon.querySelector("h2").textContent = fag.title.rendered;
             klon.querySelector("p").textContent = fag.kortintro;
             klon.querySelector(".fagelement").style.backgroundImage = "url(" + fag.billede.guid + ")";
+            klon.querySelector("button").id = fag.slug;
+            klon.querySelector("button").addEventListener("click", visMere);
+
+
+            klon.querySelector(".mere").id = fag.slug + "mere";
+            klon.querySelector(".mere").textContent = fag.langtekst;
+
             container.appendChild(klon);
             console.log("appendChild");
         }
     })
+}
+
+function visMere() {
+    console.log("viser mere info");
+
+    if (this.classList.contains("lukket")) {
+        this.classList = "open"
+        document.querySelector("#" + this.id + "mere").style.display = "block";
+    } else {
+        this.classList = "lukket"
+        document.querySelector("#" + this.id + "mere").style.display = "none";
+    }
+
 }

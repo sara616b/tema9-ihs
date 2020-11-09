@@ -1,5 +1,3 @@
-"use strict"
-
 document.addEventListener("DOMContentLoaded", hentData);
 
 let template = document.querySelector("template");
@@ -12,7 +10,7 @@ async function hentData() {
     console.log("hentData");
 
     //json link: https://sarahfrederiksen.dk/kea/2_semester/tema9/ihs/wordpress/wp-json/wp/v2/
-    const link = "https://sarahfrederiksen.dk/kea/2_semester/tema9/ihs/wordpress/wp-json/wp/v2/faggruppe/156"
+    const link = "https://sarahfrederiksen.dk/kea/2_semester/tema9/ihs/wordpress/wp-json/wp/v2/pages/236"
     const respons = await fetch(link);
     const json = await respons.json();
 
@@ -47,11 +45,12 @@ async function filterContent() {
 
     //filtrer efter kategori og vis
     jsonfag.forEach((fag) => {
-        if (fag.kategori == "idrætsfag") {
+        if (fag.kategori == "linjer") {
             const klon = template.cloneNode(true).content;
             klon.querySelector("h2").textContent = fag.title.rendered;
             klon.querySelector("p").textContent = fag.kortintro;
             klon.querySelector(".fagelement").style.backgroundImage = "url(" + fag.billede.guid + ")";
+
             klon.querySelector("button").id = fag.slug;
             klon.querySelector("button").addEventListener("click", visMere);
 
@@ -75,5 +74,8 @@ function visMere() {
         this.classList = "lukket"
         document.querySelector("#" + this.id + "mere").style.display = "none";
     }
+    /*
+        document.querySelector("#" + this.id + "mere").style.display = "block";*/
+
 
 }

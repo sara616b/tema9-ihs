@@ -1,5 +1,3 @@
-"use strict"
-
 document.addEventListener("DOMContentLoaded", hentData);
 
 let template = document.querySelector("template");
@@ -12,7 +10,7 @@ async function hentData() {
     console.log("hentData");
 
     //json link: https://sarahfrederiksen.dk/kea/2_semester/tema9/ihs/wordpress/wp-json/wp/v2/
-    const link = "https://sarahfrederiksen.dk/kea/2_semester/tema9/ihs/wordpress/wp-json/wp/v2/faggruppe/156"
+    const link = "https://sarahfrederiksen.dk/kea/2_semester/tema9/ihs/wordpress/wp-json/wp/v2/faggruppe/233"
     const respons = await fetch(link);
     const json = await respons.json();
 
@@ -37,31 +35,29 @@ function vis(data) {
 async function filterContent() {
 
     //json link: https://sarahfrederiksen.dk/kea/2_semester/tema9/ihs/wordpress/wp-json/wp/v2/
-    const faglink = "https://sarahfrederiksen.dk/kea/2_semester/tema9/ihs/wordpress/wp-json/wp/v2/fag?per_page=100"
-    const responsfag = await fetch(faglink);
-    const jsonfag = await responsfag.json();
-    let filtrerede;
-    console.log("Det virker!!!");
+    const rejselink = "https://sarahfrederiksen.dk/kea/2_semester/tema9/ihs/wordpress/wp-json/wp/v2/rejse?per_page=100"
+    const responsfag = await fetch(rejselink);
+    const jsonrejse = await responsfag.json();
 
-    console.log(jsonfag);
+    console.log(jsonrejse);
 
     //filtrer efter kategori og vis
-    jsonfag.forEach((fag) => {
-        if (fag.kategori == "idrætsfag") {
-            const klon = template.cloneNode(true).content;
-            klon.querySelector("h2").textContent = fag.title.rendered;
-            klon.querySelector("p").textContent = fag.kortintro;
-            klon.querySelector(".fagelement").style.backgroundImage = "url(" + fag.billede.guid + ")";
-            klon.querySelector("button").id = fag.slug;
-            klon.querySelector("button").addEventListener("click", visMere);
+    jsonrejse.forEach((rejse) => {
+        const klon = template.cloneNode(true).content;
+        klon.querySelector("h2").textContent = rejse.title.rendered;
+        klon.querySelector("p").textContent = rejse.kortbeskrivelse;
+        klon.querySelector(".fagelement").style.backgroundImage = "url(" + rejse.splash.guid + ")";
+
+        klon.querySelector("button").id = rejse.slug;
+        klon.querySelector("button").addEventListener("click", visMere);
 
 
-            klon.querySelector(".mere").id = fag.slug + "mere";
-            klon.querySelector(".mere").textContent = fag.langtekst;
+        klon.querySelector(".mere").id = rejse.slug + "mere";
+        klon.querySelector(".mere").textContent = rejse.lang_beskrivelse;
 
-            container.appendChild(klon);
-            console.log("appendChild");
-        }
+        container.appendChild(klon);
+        console.log("appendChild");
+
     })
 }
 
