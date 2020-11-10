@@ -356,6 +356,13 @@ button a {
     background-size: cover;
 }
 
+.fagartikel:nth-child(even) {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+
+}
+
 .fagartikel p,
 .fagartikel h2 {
     padding: 5px 20px;
