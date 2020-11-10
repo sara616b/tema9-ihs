@@ -36,6 +36,6 @@ function vis(data) {
         "<a href='faellesfag.html'><img src='" + data.ikoner[4].guid + "' alt='ikoner'></a>";
 
     //ikoner om 'mere'
-    document.querySelector("#moreikoner").innerHTML = "<a href='https://ipaper.ipapercms.dk/IdraetshoejskolenSoenderborg/lange-kurser/hoejskoleelev-2020/'><img src='" + data.ikoneranden[0].guid + "' alt='ikoner'></a>" + "<a href='tilmelding.html'><img src='" + data.ikoneranden[1].guid + "' alt='ikoner'></a>" + "<a href='tilmelding.html'><img src='" + data.ikoneranden[2].guid + "' alt='ikoner'></a>";
+    document.querySelector("#moreikoner").innerHTML = "<a href='https://ipaper.ipapercms.dk/IdraetshoejskolenSoenderborg/lange-kurser/hoejskoleelev-2020/'><img src='" + data.ikoneranden[0].guid + "' alt='ikoner'></a>" + "<a href='tilmelding.html'><img src='" + data.ikoneranden[1].guid + "' alt='ikoner'></a>" + "<a href='tilmelding.html'><img src='" + data.ikoneranden[2].guid + "' alt='ikoner'></a>" + "<a href='om_ihs.html'><img src='" + data.ikoneranden[3].guid + "' alt='ikoner'></a>";
 
 }
