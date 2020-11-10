@@ -56,7 +56,7 @@ async function filterContent() {
 
 
             klon.querySelector(".mere").id = fag.slug + "mere";
-            klon.querySelector(".mere").textContent = fag.langtekst;
+            klon.querySelector(".mere").innerHTML = fag.content.rendered;
 
             container.appendChild(klon);
             console.log("appendChild");
