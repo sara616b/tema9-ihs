@@ -356,11 +356,14 @@ button a {
     background-size: cover;
 }
 
-.fagartikel:nth-child(even) {
+.fagartikel:nth-child(even) h2,
+.fagartikel:nth-child(even) p,
+.fagartikel:nth-child(even) button {
     display: flex;
     flex-direction: column;
     align-items: end;
-
+    margin: auto;
+    margin-right: 0;
 }
 
 .fagartikel p,
@@ -396,6 +399,107 @@ button a {
     padding: 40px;
     line-height: 1.5rem;
 }
+
+
+/*________________blogpost___________________*/
+
+#blogcontent {
+    grid-row: 3/4;
+    grid-column: 1/5;
+    padding: 0;
+    background-color: #0b1d42;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    color: white;
+    font-family: sans-serif;
+}
+
+#blogindhold {
+    padding: 40px;
+    color: white;
+    font-family: sans-serif;
+    background-color: #182e5c;
+}
+
+#blogindhold h3 {
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+
+#blogcontent .postartikel {
+    padding: 20px;
+}
+
+#blogcontent .image {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+}
+
+/*______popup til blogposts____*/
+
+#popup {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(11, 29, 66, 0.71);
+    display: none;
+    cursor: pointer;
+}
+
+#popup section {
+    width: 80vw;
+    height: 80vh;
+    overflow-y: scroll;
+    margin: 3rem auto;
+    background-color: rgb(229, 233, 242);
+    display: flex;
+    flex-direction: column;
+    cursor: auto;
+    padding: 40px;
+}
+
+#popup button {
+    background-color: rgb(229, 233, 242);
+    border: none;
+    color: #0b1d42;
+    cursor: pointer;
+    margin: 20px;
+    width: 30px;
+
+}
+
+#popup img {
+    width: 80%;
+    margin: 0 auto;
+    height: 300px;
+    object-fit: cover;
+}
+
+#popup h3 {
+    font-family: sans-serif;
+    color: #0b1d42;
+    text-align: center;
+    font-size: 2rem;
+    margin: 20px 0 0 0;
+}
+
+#poptekst img {
+    display: flex;
+}
+
+#popup p {
+    padding: 10px;
+    border-radius: 0;
+    line-height: 130%;
+    font-family: sans-serif;
+    line-height: 1.7rem;
+}
+
 
 /*-----------sociale medielinks og footer-----------------*/
 

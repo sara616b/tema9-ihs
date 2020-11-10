@@ -26,6 +26,5 @@ function vis(data) {
 
     //sætter tre ikoner fra forside-page på index.html
     document.querySelector("#tilmelding").innerHTML =
-        "<img src='" + data.ikoner[0].guid + "' alt='ikoner'>" + "<img src='" + data.ikoner[1].guid + "' alt='ikoner'>" + "<img src='" + data.ikoner[2].guid + "' alt='ikoner'>";
-
+        "<a href='https://booking.ihs.dk/da/tilmelding-hojskole.asp'><img src='" + data.ikoner[0].guid + "' alt='ikoner'></a>" + "<a href='https://booking.ihs.dk/da/tilmelding-hojskole.asp'><img src='" + data.ikoner[1].guid + "' alt='ikoner'></a>" + "<a href='https://booking.ihs.dk/da/tilmelding-hojskole.asp'><img src='" + data.ikoner[2].guid + "' alt='ikoner'></a>";
 }
