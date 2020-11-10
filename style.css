@@ -97,7 +97,7 @@ header nav #dropdown {
 header nav .dropdown_fag {
     flex-direction: column;
     flex-wrap: nowrap;
-    padding-left: 15px;
+    padding-left: 10px;
     background-color: green;
     font-size: 0.8rem;
 }
@@ -261,7 +261,7 @@ button a {
     background-color: #0b1d42;
     padding: 20px;
     color: white;
-
+    width: 100%;
 }
 
 
@@ -278,15 +278,20 @@ button a {
     justify-content: space-around;
     color: white;
     font-family: sans-serif;
+    width: 100%;
 }
 
 #content h2 {
     line-height: 2.5rem;
+    width: 100%;
+    word-wrap: break-word;
 }
 
 #content p {
     line-height: 2rem;
     padding-bottom: 15px;
+    width: 100%;
+    word-wrap: break-word;
 
 }
 
@@ -342,6 +347,10 @@ button a {
     font-family: sans-serif;
 }
 
+.fagartikel {
+    width: 100vw;
+}
+
 .fagelement {
     padding: 20px;
     background-size: cover;
@@ -359,6 +368,7 @@ button a {
     font-weight: bold;
     font-size: 2rem;
     text-transform: uppercase;
+    word-wrap: break-word;
 }
 
 .fagartikel button {
@@ -689,6 +699,10 @@ footer button {
     #tilmelding img {
         height: auto;
         width: 200px;
+    }
+
+    .fagartikel {
+        width: auto;
     }
 
 }
