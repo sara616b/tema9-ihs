@@ -449,7 +449,7 @@ button a {
 #blogcontent .image {
     height: 200px;
     width: 100%;
-    object-fit: cover;
+    background-size: cover;
 }
 
 /*______popup til blogposts____*/

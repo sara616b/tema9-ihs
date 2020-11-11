@@ -39,7 +39,7 @@ async function vis(data) {
     jsonpost.forEach((post) => {
         const klon = template.cloneNode(true).content;
         klon.querySelector("h2").textContent = post.title.rendered;
-        klon.querySelector(".tekst").innerHTML = post.kort_tekst;
+        klon.querySelector(".tekst").innerHTML = "<p>" + post.navn + "<br>" + post.alder + "<br>" + post.hjemby + "<br>" + post.ihsr + "</p>";
         klon.querySelector("button").addEventListener("click", () => visDetaljer(post));
         klon.querySelector(".image").style.backgroundImage = "url(" + post.billede.guid + ")";
         document.querySelector("#blogcontent").appendChild(klon);
