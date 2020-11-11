@@ -49,7 +49,9 @@ nav button,
     border: none;
 }
 
-nav a:hover {
+nav a:hover,
+button:hover,
+a:hover {
     opacity: 0.7;
 }
 
@@ -254,16 +256,104 @@ button a {
 
 /*________________priser-indhold___________*/
 
-#pris {
-    font-family: sans-serif;
+#priscontent {
     grid-row: 3/4;
     grid-column: 1/5;
+
+}
+
+#pris {
+    font-family: sans-serif;
     background-color: #0b1d42;
     padding: 20px;
     color: white;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
+#prissek {
+    font-family: sans-serif;
+    background-color: #0b1d42;
+    padding: 20px;
+    color: white;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#prissek button {
+    width: 40px;
+    height: 40px;
+    background-color: #0b1d42;
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+
+#prissek button img {
+    width: 60%;
+    transform: rotate(90deg);
+}
+
+.prisheader {
+    display: flex;
+    flex-direction: row;
+    padding: 10px 10px 10px 0;
+    border-bottom: solid white 2px;
+}
+
+.tall_line {
+    display: none;
+}
+
+#pris figure {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+#pris p {
+    padding: 10px 0;
+}
+
+.valg1,
+.valg2,
+.valg3,
+.valg4 {
+    margin: 5px 0;
+    padding: 10px;
+    border: solid #1b315f 0.5px;
+    flex-basis: 180px;
+    flex-grow: 1;
+}
+
+#prissek .mere {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+#prissek #det-med-smatmere {
+    flex-wrap: nowrap;
+    flex-direction: column;
+}
+
+#prissek #det-med-smatmere p,
+#prissek #det-med-smatmere h3 {
+    line-height: 1.7rem;
+    padding: 0 10px;
+}
+
+.mere hr {
+    grid-area: none;
+    width: 98%;
+    height: 1px;
+    margin: 20px auto;
+    color: #d1d1d1;
+}
 
 /*________________højskole-indhold___________*/
 
@@ -777,7 +867,7 @@ footer button {
     }
 }
 
-/*_______info-tekst og ikonbilleder på højskole-siden tilpasses i breden_*/
+/*_______info-tekst og ikonbilleder på højskole-siden tilpasses i breden + pris-siden går fra en kollone til to_*/
 @media only screen and (min-width: 600px) {
 
     #content {
@@ -796,12 +886,22 @@ footer button {
         width: 50%;
     }
 
-
     #fagomrader img,
     #readmore img {
         width: 160px;
         padding: 10px;
     }
+
+    #pris {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    #pris .tall_line {
+        display: block;
+        margin: 10px;
+    }
+
 
 
 }
