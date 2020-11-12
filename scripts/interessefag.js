@@ -47,7 +47,7 @@ async function filterContent() {
 
     //filtrer efter kategori og vis
     jsonfag.forEach((fag) => {
-        if (fag.kategori == "idrætsfag") {
+        if (fag.kategori == "interessefag") {
             const klon = template.cloneNode(true).content;
             klon.querySelector("h2").textContent = fag.title.rendered;
             klon.querySelector("p").textContent = fag.kortintro;

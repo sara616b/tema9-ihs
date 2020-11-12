@@ -37,7 +37,8 @@ header {
 nav a,
 #menuknap,
 nav button,
-#menu {
+#menu,
+#menu2 {
     color: white;
     padding: 10px;
     text-decoration: none;
@@ -55,7 +56,8 @@ a:hover {
     opacity: 0.7;
 }
 
-#dropdown_button {
+#dropdown_button,
+#dropdown_button2 {
     margin: 0;
     padding: 0;
 }
@@ -89,14 +91,16 @@ header nav {
     justify-content: flex-start;
 }
 
-header nav #dropdown {
+header nav #dropdown,
+header nav #dropdown2 {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     padding: 10px;
 }
 
-header nav .dropdown_fag {
+header nav .dropdown_fag,
+header nav .dropdown_om {
     flex-direction: column;
     flex-wrap: nowrap;
     padding-left: 10px;
@@ -133,11 +137,13 @@ nav div input[type=text] {
         width: 100%;
     }
 
-    .dropdown_fag .dropfag {
+    .dropdown_fag .dropfag,
+    .dropdown_om .dropfag {
         padding: 10px;
     }
 
-    .dropdown_fag {
+    .dropdown_fag,
+    .dropdown_om {
         padding: 0;
     }
 
@@ -156,11 +162,13 @@ nav div input[type=text] {
         justify-content: space-between;
     }
 
-    header nav #dropdown {
+    header nav #dropdown,
+    header nav #dropdown2 {
         padding: 0 10px;
     }
 
-    .dropdown_fag {
+    .dropdown_fag,
+    .dropdown_om {
         display: flex;
         visibility: hidden;
         position: absolute;
@@ -173,6 +181,15 @@ nav div input[type=text] {
     .dropdown_fag:hover {
         visibility: visible;
     }
+
+    #hojskole_menu2:hover ~ .dropdown_om {
+        visibility: visible;
+    }
+
+    .dropdown_om:hover {
+        visibility: visible;
+    }
+
 }
 
 
@@ -358,7 +375,8 @@ button a {
 
 /*________________højskole-indhold___________*/
 
-#content {
+#content,
+#personale {
     grid-row: 3/4;
     grid-column: 1/5;
     background-color: #0b1d42;
@@ -372,13 +390,15 @@ button a {
     width: 100%;
 }
 
-#content h2 {
+#content h2,
+#personale h2 {
     line-height: 2.5rem;
     width: 100%;
     word-wrap: break-word;
 }
 
-#content p {
+#content p,
+#personale p {
     line-height: 2rem;
     padding-bottom: 15px;
     width: 100%;
@@ -390,14 +410,15 @@ button a {
     margin: 20px auto;
 }
 
-#content img {
+#content img,
+#personale img {
     width: 100%;
     height: auto;
 }
 
 
 #fagomrader #last_ikon img {
-    padding: 24px;
+    padding: 21px;
     padding-top: 13px;
 }
 
@@ -612,6 +633,12 @@ button a {
 }
 
 
+/*___________om undersider________*/
+
+#personale {
+    flex-direction: column;
+}
+
 /*-----------sociale medielinks og footer-----------------*/
 
 #sociale {
@@ -751,12 +778,13 @@ footer button {
     }
 
     #menuknap,
-    #dropdown_button {
+    #dropdown_button,
+    #dropdown_button2 {
         visibility: hidden;
         display: none;
     }
 
-    #dropdown_linje {
+    .dropdown_linje {
         height: auto;
         position: relative;
         display: inline-block;
@@ -858,9 +886,6 @@ footer button {
         justify-content: center;
         flex-direction: column;
     }
-
-    /*_________forsøg på at få dropdown til at fungerer!!!!____*/
-
 
 }
 
