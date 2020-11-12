@@ -254,6 +254,7 @@ button a {
     padding: 20px;
 }
 
+
 /*________________priser-indhold___________*/
 
 #priscontent {
@@ -392,6 +393,12 @@ button a {
 #content img {
     width: 100%;
     height: auto;
+}
+
+
+#fagomrader #last_ikon img {
+    padding: 24px;
+    padding-top: 13px;
 }
 
 #fagomrader {
