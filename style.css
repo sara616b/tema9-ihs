@@ -415,9 +415,13 @@ button a {
     margin: 20px auto;
 }
 
-#content img,
-#personale img {
+#content img {
     width: 100%;
+    height: auto;
+}
+
+#personale img {
+    max-width: 100%;
     height: auto;
 }
 
