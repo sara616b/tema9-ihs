@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", hentData);
 
 let template = document.querySelector("template");
 let fag;
-let container = document.querySelector("#fag-content");
+let container = document.querySelector("#faq_sek");
 
 
 //Henter json data og starter højskole-siden (async for at få loadet json før man går videre)
@@ -16,53 +16,34 @@ async function hentData() {
 
     //vis splash
     vis(json);
-
-    //filtrer fagene
-    //filterContent();
 }
 
 //Indsætter data fra wordpress på rette pladser på forsiden
-function vis(data) {
+async function vis(data) {
     console.log("vis");
-
-    //TODO - ret billeder og tekstfelter i wordpress og definer dem her
     document.querySelector("#splash").style.backgroundImage = "url(" + data.splashbillede.guid + ")";
     document.querySelector("#title").innerHTML = data.title.rendered;
 
-    document.querySelector("#content").innerHTML = data.content.rendered;
+    //henter data til hvert faq
+    const faqlink = "https://sarahfrederiksen.dk/kea/2_semester/tema9/ihs/wordpress/wp-json/wp/v2/faq?per_page=100"
+    const responsfaq = await fetch(faqlink);
+    const jsonfaq = await responsfaq.json();
 
-}
+    //vis alle sektioner med indhold
+    jsonfaq.forEach((faq) => {
 
-/*//filtrer fagene efter faggruppe og viser dem
-async function filterContent() {
+        const klon = template.cloneNode(true).content;
+        klon.querySelector("h2").textContent = faq.title.rendered;
 
-    //json link: https://sarahfrederiksen.dk/kea/2_semester/tema9/ihs/wordpress/wp-json/wp/v2/
-    const faglink = "https://sarahfrederiksen.dk/kea/2_semester/tema9/ihs/wordpress/wp-json/wp/v2/fag?per_page=100"
-    const responsfag = await fetch(faglink);
-    const jsonfag = await responsfag.json();
-    let filtrerede;
-    console.log("Det virker!!!");
+        klon.querySelector(".mere").id = faq.slug + "mere";
+        klon.querySelector(".mere").innerHTML = faq.content.rendered;
 
-    console.log(jsonfag);
+        klon.querySelector("button").id = faq.slug;
+        klon.querySelector("button").addEventListener("click", visMere);
 
-    //filtrer efter kategori og vis
-    jsonfag.forEach((fag) => {
-        if (fag.kategori == "specialefag") {
-            const klon = template.cloneNode(true).content;
-            klon.querySelector("h2").textContent = fag.title.rendered;
-            klon.querySelector("p").textContent = fag.kortintro;
-            klon.querySelector(".fagelement").style.backgroundImage = "url(" + fag.billede.guid + ")";
+        container.appendChild(klon);
+        console.log("appendChild");
 
-            klon.querySelector("button").id = fag.slug;
-            klon.querySelector("button").addEventListener("click", visMere);
-
-
-            klon.querySelector(".mere").id = fag.slug + "mere";
-            klon.querySelector(".mere").textContent = fag.langtekst;
-
-            container.appendChild(klon);
-            console.log("appendChild");
-        }
     })
 }
 
@@ -71,13 +52,15 @@ function visMere() {
 
     if (this.classList.contains("lukket")) {
         this.classList = "open"
-        document.querySelector("#" + this.id + "mere").style.display = "block";
+        document.querySelector("#" + this.id + "mere").style.display = "flex";
+        this.style.transform = "rotate(90deg)";
     } else {
         this.classList = "lukket"
         document.querySelector("#" + this.id + "mere").style.display = "none";
+        this.style.transform = "rotate(0deg)";
     }
     /*
         document.querySelector("#" + this.id + "mere").style.display = "block";*/
 
-/*
-}*/
+
+}
