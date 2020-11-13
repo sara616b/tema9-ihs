@@ -18,6 +18,14 @@ main {
     grid-gap: 0;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: gelo, serif;
+}
+
 
 /*__________header og navigation________________*/
 
@@ -46,7 +54,7 @@ nav button,
     background-color: #47ab48;
     justify-content: flex-start;
     cursor: pointer;
-    font-family: sans-serif;
+    font-family: proxima-nova, sans-serif;
     border: none;
 }
 
@@ -221,7 +229,7 @@ nav div input[type=text] {
     padding: 40px;
     margin: 40px;
     text-align: center;
-    font-family: sans-serif;
+    font-family: proxima-nova, sans-serif;
     line-height: 2.5rem;
 }
 
@@ -231,6 +239,7 @@ nav div input[type=text] {
     padding: 20px;
     margin: auto;
     opacity: 1;
+    font-family: gelo, serif;
 }
 
 #splash #info p {
@@ -286,7 +295,7 @@ button a {
 }
 
 #pris {
-    font-family: sans-serif;
+    font-family: proxima-nova, sans-serif;
     padding: 20px;
     color: white;
     width: 100%;
@@ -298,7 +307,7 @@ button a {
 
 #prissek,
 #faq_sek {
-    font-family: sans-serif;
+    font-family: proxima-nova, sans-serif;
     background-color: #0b1d42;
     padding: 20px;
     color: white;
@@ -412,7 +421,7 @@ button a {
     flex-direction: column;
     justify-content: space-around;
     color: white;
-    font-family: sans-serif;
+    font-family: proxima-nova, sans-serif;
     width: 100%;
 }
 
@@ -421,6 +430,7 @@ button a {
     line-height: 2.5rem;
     width: 100%;
     word-wrap: break-word;
+    font-family: gelo, serif;
 }
 
 #content p,
@@ -492,7 +502,7 @@ button a {
     flex-direction: column;
     justify-content: space-around;
     color: white;
-    font-family: sans-serif;
+    font-family: proxima-nova, sans-serif;
 }
 
 .fagartikel {
@@ -572,13 +582,13 @@ button a {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     color: white;
-    font-family: sans-serif;
+    font-family: proxima-nova, sans-serif;
 }
 
 #blogindhold {
     padding: 40px;
     color: white;
-    font-family: sans-serif;
+    font-family: proxima-nova, sans-serif;
     background-color: #182e5c;
 }
 
@@ -642,7 +652,7 @@ button a {
 }
 
 #popup h3 {
-    font-family: sans-serif;
+    font-family: gelo, serif;
     color: #0b1d42;
     text-align: center;
     font-size: 2rem;
@@ -657,7 +667,7 @@ button a {
     padding: 10px;
     border-radius: 0;
     line-height: 130%;
-    font-family: sans-serif;
+    font-family: proxima-nova, sans-serif;
     line-height: 1.7rem;
 }
 
@@ -682,7 +692,7 @@ button a {
     grid-template-columns: repeat(auto-fill, minmax(275px, 1fr));
     color: white;
     grid-gap: 40px;
-    font-family: sans-serif;
+    font-family: proxima-nova, sans-serif;
 
 }
 
@@ -695,7 +705,7 @@ button a {
     color: white;
     text-transform: uppercase;
     padding: 20px;
-    font-family: sans-serif;
+    font-family: gelo, serif;
     font-weight: bold;
     display: flex;
     flex-wrap: wrap;
@@ -749,7 +759,7 @@ footer .right_footer1,
 footer .right_footer2 {
     color: black;
     padding: 20px;
-    font-family: sans-serif;
+    font-family: proxima-nova, sans-serif;
 }
 
 hr {
@@ -865,7 +875,7 @@ footer button {
     nav div a {
         color: black;
         padding: 60px 0 20px 0;
-        font-family: sans-serif;
+        font-family: proxima-nova, sans-serif;
         text-decoration: none;
         text-transform: uppercase;
         background-color: white;
