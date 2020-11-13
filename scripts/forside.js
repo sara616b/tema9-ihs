@@ -23,7 +23,7 @@ function vis(data) {
     document.querySelector("#info").innerHTML = data.content.rendered + "<button><a href='" + "tilmelding.html" + "'> Tilmeld dig her </a></button>";
 
     //sætter tre ikoner fra forside-page på index.html
-    document.querySelector("#forside").innerHTML =
+    document.querySelector("#forsideknapper").innerHTML =
         "<a href='blog.html'><img src='" + data.ikoner[0].guid + "' alt='ikoner'></a>" + "<a href='https://www.google.com/maps?ll=54.898281,9.803&z=15&t=m&hl=da&gl=US&mapclient=embed&cid=6776185303333634501'><img src='" + data.ikoner[1].guid + "' alt='ikoner'></a>" + "<a href='tilmelding.html'><img src='" + data.ikoner[2].guid + "' alt='ikoner'></a>";
 
 }

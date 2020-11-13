@@ -285,6 +285,12 @@ button a {
     padding: 20px;
 }
 
+#ord {
+    color: white;
+    border-bottom: solid white 1px;
+    padding-bottom: 10px;
+}
+
 
 /*________________priser-indhold___________*/
 
