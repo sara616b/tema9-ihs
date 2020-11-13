@@ -22,7 +22,7 @@ async function hentData() {
 }
 
 //Indsætter data fra wordpress på rette pladser på forsiden
-function vis(data) {
+async function vis(data) {
     console.log("vis");
 
     //TODO - ret billeder og tekstfelter i wordpress og definer dem her
@@ -30,6 +30,20 @@ function vis(data) {
     document.querySelector("#title").innerHTML = data.title.rendered;
 
     container.innerHTML = data.content.rendered;
+
+    const perslink = "https://sarahfrederiksen.dk/kea/2_semester/tema9/ihs/wordpress/wp-json/wp/v2/personale?per_page=100"
+    const responspers = await fetch(perslink);
+    const jsonpers = await responspers.json();
+
+    jsonpers.forEach((person) => {
+        const klon = template.cloneNode(true).content;
+        klon.querySelector("h2").textContent = person.title.rendered;
+        klon.querySelector("#person_info").innerHTML = person.content.rendered;
+
+        document.querySelector("#personer").appendChild(klon);
+        console.log("appendChild");
+
+    })
 
 }
 

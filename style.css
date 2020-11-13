@@ -56,6 +56,10 @@ a:hover {
     opacity: 0.7;
 }
 
+a img:hover {
+    transform: scale(1.2);
+}
+
 #dropdown_button,
 #dropdown_button2 {
     margin: 0;
@@ -79,9 +83,9 @@ header img {
 }
 
 nav div img {
-    width: 34px;
-    height: 34px;
-    margin: 0 0 0 10px;
+    width: 70px;
+    height: 27px;
+    margin: 5px 0 0 10px;
 }
 
 header nav {
@@ -283,13 +287,13 @@ button a {
 
 #pris {
     font-family: sans-serif;
-    background-color: #0b1d42;
     padding: 20px;
     color: white;
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    background-color: #0b1d42;
 }
 
 #prissek,
@@ -304,11 +308,27 @@ button a {
     justify-content: center;
 }
 
+
+#prissek article,
+#faq_sek article {
+    background-color: #0b1d42;
+}
+
+#prissek article:nth-child(even),
+#faq_sek article:nth-of-type(even) {
+    background-color: #162a53;
+}
+
+#prissek h2,
+#faq_sek h2 {
+    padding-top: 5px;
+}
+
 #prissek button,
 #faq_sek button {
     width: 40px;
     height: 40px;
-    background-color: #0b1d42;
+    background-color: rgba(11, 29, 66, 0);
     padding: 0;
     margin: 0;
     border: none;
@@ -324,7 +344,7 @@ button a {
     display: flex;
     flex-direction: row;
     padding: 10px 10px 10px 0;
-    border-bottom: solid white 2px;
+    border-top: solid white 1px;
 }
 
 .tall_line {
@@ -358,6 +378,7 @@ button a {
     flex-wrap: wrap;
     padding: 10px;
 }
+
 
 #prissek #det-med-smatmere {
     flex-wrap: nowrap;
@@ -522,7 +543,6 @@ button a {
 /*___mere info tekster___*/
 
 .mere {
-    background-color: #253964;
     padding: 40px;
     line-height: 2rem;
 }
@@ -646,6 +666,24 @@ button a {
 
 #personale {
     flex-direction: column;
+    padding: 40px 40px 0 40px;
+}
+
+#personale h3,
+#personale h4 {
+    font-size: 2rem;
+    padding: 20px 0;
+}
+
+#personer {
+    padding: 0 40px 40px 40px;
+    background-color: #0b1d42;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(275px, 1fr));
+    color: white;
+    grid-gap: 40px;
+    font-family: sans-serif;
+
 }
 
 /*-----------sociale medielinks og footer-----------------*/
@@ -839,9 +877,9 @@ footer button {
     }
 
     nav div img {
-        width: 34px;
-        height: 34px;
-        margin: 0 0 0 10px;
+        width: 70px;
+        height: 27px;
+        margin: 5px 0 0 3px;
     }
 
 
