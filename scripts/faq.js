@@ -59,8 +59,4 @@ function visMere() {
         document.querySelector("#" + this.id + "mere").style.display = "none";
         this.style.transform = "rotate(0deg)";
     }
-    /*
-        document.querySelector("#" + this.id + "mere").style.display = "block";*/
-
-
 }
