@@ -27,7 +27,7 @@ async function vis(data) {
 
     //sætter tre ikoner fra forside-page på index.html
     document.querySelector("#tilmeldknapper").innerHTML =
-        "<a href='https://booking.ihs.dk/da/tilmelding-hojskole.asp'><img src='" + data.ikoner[0].guid + "' alt='ikoner'></a>" + "<a href='https://booking.ihs.dk/da/tilmelding-hojskole.asp'><img src='" + data.ikoner[1].guid + "' alt='ikoner'></a>" + "<a href='https://booking.ihs.dk/da/tilmelding-hojskole.asp'><img src='" + data.ikoner[2].guid + "' alt='ikoner'></a>";
+        "<a href='https://booking.ihs.dk/da/tilmelding-hojskole.asp'><img src='" + data.ikoner[0].guid + "' alt='ikoner'></a>" + "<a href='https://booking.ihs.dk/da/tilmelding-hojskole.asp'><img src='" + data.ikoner[1].guid + "' alt='ikoner'></a>" + "<a href='https://www.ihs.dk/book-en-rundvisning'><img src='" + data.ikoner[2].guid + "' alt='ikoner'></a>";
 
     //hent info om priser
     const link2 = "https://sarahfrederiksen.dk/kea/2_semester/tema9/ihs/wordpress/wp-json/wp/v2/prissektion?per_page=100"

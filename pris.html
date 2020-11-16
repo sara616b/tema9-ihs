@@ -13,10 +13,11 @@
 
 <body>
     <main id="container">
+
+       <!--header med navigation, logo, søgefelt og sprogvalg. Indsættes med JS-filen: menu.js-->
         <header>
 
         </header>
-
 
         <!--splashsektion med billede og intro-->
         <section id="splash" style="min-height: 327px">
@@ -24,8 +25,8 @@
             </h1>
         </section>
 
+       <!--afsnit hvor wp data indsættes. ikoner og info om højskole i pris og mere info fold-out i prissek-->
         <div id="priscontent">
-            <!--afsnit på forsiden hvor html fra wordpress page bliver sat ind-->
             <section id="pris"></section>
 
             <section id="prissek">
@@ -34,6 +35,7 @@
 
         </div>
 
+       <!--template til mere info om pris fold-outs-->
         <template>
             <article class="prisartikel">
                 <div class="prisheader">
@@ -84,8 +86,11 @@
 
         <!--script der henter og sætter json data fra wordpress-->
         <script src="scripts/pris.js"></script>
-        <!--script der får burgermenu til at virke-->
+
+        <!--script der indsætter menu og får burgermenu til at virke-->
         <script src="scripts/menu.js"></script>
+
+        <!--gør menupunktet 'pris' bold-->
         <script>
             document.addEventListener("DOMContentLoaded", (event) => {
                 document.querySelector("#pris_menu").style.fontWeight = "bold";

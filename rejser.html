@@ -13,6 +13,7 @@
 
 <body>
     <main id="container">
+       <!--header med navigation, logo, søgefelt og sprogvalg. Indsættes med JS-filen: menu.js-->
         <header>
 
         </header>
@@ -23,11 +24,12 @@
             </h1>
         </section>
 
+       <!--her indsættes alle rejserne fra wp-->
         <section id="fag-content">
 
         </section>
 
-        <!--template til hvert fag-->
+        <!--template til hver rejse-->
         <template>
             <article class="fagartikel">
                 <div class="fagelement">
@@ -81,8 +83,11 @@
 
         <!--script der henter og sætter json data fra wordpress-->
         <script src="scripts/rejser.js"></script>
-        <!--script der får burgermenu til at virke-->
+
+        <!--script der indsætter menu og får burgermenu til at virke-->
         <script src="scripts/menu.js"></script>
+
+        <!--in-line script der gør menupunktet 'rejser' bold-->
         <script>
             document.addEventListener("DOMContentLoaded", (event) => {
                 document.querySelector("#rejser_menu").style.fontWeight = "bold";

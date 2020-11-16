@@ -13,6 +13,8 @@
 
 <body>
     <main id="container">
+
+       <!--header med navigation, logo, søgefelt og sprogvalg. Indsættes med JS-filen: menu.js-->
         <header>
         </header>
 
@@ -21,19 +23,16 @@
             <h1 id="title">
             </h1>
         </section>
+
+        <!--data fra wp indsættes her. intro og billede fra page'en 'personale' i #personale og hver enkelt person som liste i 'personer'-->
         <section id="indholdpers">
             <section id="personale">
-
             </section>
-
             <section id="personer">
-
             </section>
-
         </section>
 
-
-        <!--template til hvert fag-->
+        <!--template til hver person-->
         <template>
             <article class="personartikel">
                 <div class="personwrap">
@@ -57,6 +56,7 @@
             </a>
 
         </section>
+
         <!--footer, der er delt op i tre kolloner-->
         <footer>
             <div class="left_footer">
@@ -79,14 +79,17 @@
 
         </footer>
     </main>
+
+    <!--script der indsætter data fra wp-->
     <script src="scripts/personale.js"></script>
 
     <!--script der får burgermenu til at virke-->
     <script src="scripts/menu.js"></script>
+
+    <!--gør menupunktet 'personale og bestyrrelse' bold-->
     <script>
         document.addEventListener("DOMContentLoaded", (event) => {
             document.querySelector("#personale_menu").style.fontWeight = "bold";
-
         });
 
     </script>

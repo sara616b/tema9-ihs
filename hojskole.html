@@ -13,9 +13,9 @@
 
 <body>
     <main id="container">
+       <!--header med navigation, logo, søgefelt og sprogvalg. Indsættes med JS-filen: menu.js-->
         <header>
         </header>
-
 
         <!--splashsektion med billede og intro-->
         <section id="splash" style="min-height: 327px">
@@ -23,26 +23,20 @@
             </h1>
         </section>
 
+       <!--indhold fra wp page 'højskole' indsættes. tekst i left og video/billede i right. Fagknapper i fagikoner og flere ikoner i moreikoner-->
         <section id="content">
             <div id="left">
-
             </div>
             <div id="right">
-
             </div>
-
             <div id="fagomrader">
                 <h3>Læs om de fag vi tilbyder...</h3>
                 <section id="fagikoner"></section>
-
             </div>
-
             <div id="readmore">
                 <h3>Du kan også...</h3>
                 <section id="moreikoner"></section>
-
             </div>
-
         </section>
 
         <!--sociale medie links her-->
@@ -57,7 +51,6 @@
             <a href="https://www.facebook.com/IdraetshojskolenSonderborg">
                 <img src="assets/imgs/twitter_ikon.png" alt="twitter">
             </a>
-
         </section>
 
         <!--footer, der er delt op i tre kolloner-->
@@ -79,15 +72,14 @@
                     <button><a href="tilmelding.html"> Tilmeld dig her </a></button>
                 </div>
             </div>
-
         </footer>
-
     </main>
 
-
-
+    <!--script der får menuen til at blive til og virke-->
     <script src="scripts/menu.js"></script>
+    <!--script der indsætter info fra wp-->
     <script src="scripts/hojskole.js"></script>
+    <!--sætter menupunk 'højskole' til bold-->
     <script>
         document.addEventListener("DOMContentLoaded", (event) => {
             document.querySelector("#hojskole_menu").style.fontWeight = "bold";

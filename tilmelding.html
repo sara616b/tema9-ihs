@@ -13,8 +13,9 @@
 
 <body>
     <main id="container">
-        <header>
 
+       <!--header med navigation, logo, søgefelt og sprogvalg. Indsættes med JS-filen: menu.js-->
+        <header>
         </header>
 
         <!--splashsektion med billede og intro-->
@@ -23,19 +24,21 @@
             </h1>
         </section>
 
-        <!--afsnit på forsiden hvor html fra wordpress page bliver sat ind-->
+        <!--afsnit på forsiden hvor html fra wordpress page 'tilmelding' bliver sat ind-->
         <section id="tilmelding">
             <h2 style="color: white;padding: 0 40px;">Tilmeld dig her til...</h2>
             <section id="tilmeldknapper">
             </section>
+
+            <!--under hr-streg bliver info om priser sat ind-->
             <hr style="width: 90%;color: white;margin: auto;height: 1px;">
             <h2 style="color: white; padding: 40px">Priser</h2>
             <section id="pris"></section>
             <section id="tilmeldpris">
             </section>
-
         </section>
 
+       <!--template til 'fold-out' med knap og mere info-->
         <template>
             <article class="prisartikel">
                 <div class="prisheader">
@@ -60,8 +63,8 @@
             <a href="https://www.facebook.com/IdraetshojskolenSonderborg">
                 <img src="assets/imgs/twitter_ikon.png" alt="twitter">
             </a>
-
         </section>
+
         <!--footer, der er delt op i tre kolloner-->
         <footer>
             <div class="left_footer">
@@ -84,10 +87,14 @@
 
         </footer>
     </main>
+
+    <!--script der indsætter info fra wp page 'tilmelding'-->
     <script src="scripts/tilmelding.js"></script>
 
     <!--script der får burgermenu til at virke-->
     <script src="scripts/menu.js"></script>
+
+    <!--gør menupunktet 'tilmelding' bold-->
     <script>
         document.addEventListener("DOMContentLoaded", (event) => {
             document.querySelector("#tilmelding_menu").style.fontWeight = "bold";
