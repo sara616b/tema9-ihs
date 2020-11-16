@@ -195,6 +195,10 @@ nav div input[type=text] {
         visibility: visible;
     }
 
+    .dropdown_fag {
+        margin-left: 25px;
+    }
+
     .dropdown_fag:hover {
         visibility: visible;
     }
@@ -318,6 +322,7 @@ button a {
     color: white;
     border-bottom: solid white 1px;
     padding-bottom: 10px;
+    text-transform: capitalize;
 }
 
 
@@ -608,7 +613,7 @@ button a {
 .fagartikel p,
 .fagartikel h2 {
     padding: 5px 20px;
-    max-width: 450px;
+    max-width: 410px;
     line-height: 1.8rem;
     font-weight: lighter;
 }
@@ -657,7 +662,6 @@ button a {
 /*________________blogpost___________________*/
 
 #blog {
-
     grid-row: 3/4;
     grid-column: 1/5;
 }
@@ -685,14 +689,38 @@ button a {
     padding-bottom: 20px;
 }
 
+#blogcontent h2 {
+    padding: 20px 0;
+}
+
+#blogcontent button {
+    width: 100%;
+    margin: 20px 0 0 0;
+}
+
+#blogcontent p {
+    line-height: 1.5rem;
+}
+
+.postlement {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
 #blogcontent .postartikel {
-    padding: 20px;
+    padding: 10px;
+    background-color: #182e5c;
+    margin: 10px;
+    box-shadow: 0 1px 3px #080e1a;
 }
 
 #blogcontent .image {
     height: 200px;
     width: 100%;
     background-size: cover;
+    box-shadow: 0 1px 3px #0f1f40;
 }
 
 /*______popup til blogposts____*/
@@ -862,6 +890,7 @@ footer .left_footer {
     display: flex;
     flex-wrap: nowrap;
     flex-direction: column;
+    background-color: white;
 }
 
 footer .right_footer {
@@ -870,6 +899,7 @@ footer .right_footer {
     flex-direction: column;
     justify-content: center;
     flex-wrap: nowrap;
+    background-color: white;
 }
 
 footer .right_footer1 {
@@ -883,6 +913,7 @@ footer .right_footer2 {
     display: flex;
     flex-wrap: nowrap;
     flex-direction: column;
+    background-color: white;
 }
 
 /*____logo i footer______*/
@@ -949,6 +980,10 @@ footer button {
         padding: 40px 130px;
     }
 
+    #hojskole main #content {
+        padding: 40px;
+    }
+
     header {
         flex-direction: row;
         height: 114px;
@@ -990,6 +1025,10 @@ footer button {
         width: 90%;
         justify-content: space-between;
         flex-direction: row;
+    }
+
+    #hojskole_menu {
+        margin-left: 25px;
     }
 
     nav a,
@@ -1045,6 +1084,16 @@ footer button {
         height: 0;
     }
 
+    #sociale {
+        padding: 3px 20px;
+    }
+
+    #sociale a {
+        padding: 5px;
+        display: flex;
+        justify-content: center;
+    }
+
     footer .left_footer {
         flex-direction: row;
     }
@@ -1058,6 +1107,15 @@ footer button {
     footer .right_footer1 {
         grid-area: right1;
         margin: 20px;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+    }
+
+    footer button {
+        padding: 10px;
+        margin: 20px 20px 0 20px;
+        font-size: 0.7rem;
     }
 
     footer .right_footer2 {
@@ -1077,6 +1135,9 @@ footer button {
     #sociale p {
         padding: 20px;
         font-size: 1.3rem;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
     }
 }
 
@@ -1089,19 +1150,19 @@ footer button {
 
     #left,
     #right {
-        flex-basis: 400px;
+        flex-basis: 300px;
         flex-grow: 1;
     }
 
     #content button {
         margin: 20px 0;
         height: 80px;
-        width: 50%;
+        width: 60%;
     }
 
     #fagomrader img,
     #readmore img {
-        width: 160px;
+        width: 180px;
         padding: 10px;
     }
 
