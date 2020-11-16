@@ -751,7 +751,6 @@ button a {
 #popup p {
     padding: 10px;
     border-radius: 0;
-    line-height: 130%;
     font-family: proxima-nova, sans-serif;
     line-height: 1.7rem;
 }
@@ -840,6 +839,7 @@ footer p {
     line-height: 1.7rem;
 }
 
+
 footer .left_footer,
 footer .right_footer1,
 footer .right_footer2 {
@@ -909,7 +909,44 @@ footer button {
 
 /*______header og navigation går fra burgermenu til menulinje og footer tilpasses__*/
 
+
+@media only screen and (min-width: 600px) {
+    .mere {
+        padding: 40px 180px;
+    }
+
+    #prissek #det-med-smatmere p {
+        padding: 0 30vw 0 10px;
+    }
+
+}
+
+
+@media only screen and (min-width: 1000px) {
+
+    #prissek #det-med-smatmere p,
+    #tilmeldpris #det-med-smatmere p {
+        padding: 0 350px 0 10px;
+    }
+
+
+
+    #popup p {
+        padding: 10px 80px;
+    }
+}
+
 @media only screen and (min-width: 800px) {
+
+
+    #praktisksek .mere,
+    #faq_sek .mere {
+        padding: 20px 300px 20px 20px;
+    }
+
+    #content {
+        padding: 40px 130px;
+    }
 
     header {
         flex-direction: row;
