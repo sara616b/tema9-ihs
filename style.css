@@ -636,6 +636,7 @@ button a {
 .mere {
     padding: 40px;
     line-height: 2rem;
+    border-bottom: white solid 4px;
 }
 
 .fagartikel .mere p,
