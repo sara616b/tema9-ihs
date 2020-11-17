@@ -29,6 +29,10 @@ h5 {
     font-family: gelo, serif;
 }
 
+a {
+    color: #47ab48;
+}
+
 
 /*__________header og navigation________________*/
 
@@ -272,6 +276,42 @@ button a {
     font-weight: bold;
 }
 
+#videoforside {
+    flex-basis: 200px;
+    flex-grow: 1;
+    max-width: 700px;
+    padding: 60px 0;
+}
+
+#elevtale {
+    flex-basis: 500px;
+    flex-grow: 1;
+    color: white;
+    margin: 40px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    line-height: 2rem;
+    background-color: #162a53;
+    padding: 40px 40px 0 40px;
+}
+
+#forside #elevtale img {
+    width: 250px;
+    border-radius: 50%;
+    height: auto;
+}
+
+#elevtale h3 {}
+
+#elevtale h4 {
+    border-top: solid white 1px;
+    margin: 20px auto;
+    font-style: italic;
+}
+
 /*____________forside-indhold_________*/
 
 #forside {
@@ -281,8 +321,10 @@ button a {
     padding: 20px;
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-around;
+    height: 100%;
+    width: 100vw;
 }
 
 #tilmelding {
@@ -307,9 +349,16 @@ button a {
 
 #forside img {
 
-    height: auto;
+    height: 100%;
     width: 100%;
     padding: 20px;
+}
+
+#forsideknapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
 #tilmeldknapper img {
@@ -323,6 +372,7 @@ button a {
     border-bottom: solid white 1px;
     padding-bottom: 10px;
     text-transform: capitalize;
+    text-align: center;
 }
 
 
@@ -423,6 +473,7 @@ button a {
 
 #pris p {
     padding: 10px 0;
+    text-align: center;
 }
 
 .valg1,
@@ -434,6 +485,9 @@ button a {
     border: solid #1b315f 0.5px;
     flex-basis: 180px;
     flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #prissek .mere,
@@ -600,6 +654,11 @@ button a {
     height: 400px;
 }
 
+.fagartikel:nth-child(even) .fagelement {
+    background-position: right;
+
+}
+
 .fagartikel:nth-child(even) h2,
 .fagartikel:nth-child(even) p,
 .fagartikel:nth-child(even) button {
@@ -664,6 +723,25 @@ button a {
 #blog {
     grid-row: 3/4;
     grid-column: 1/5;
+}
+
+#blogindhold figure {
+    margin: 20px;
+}
+
+#videoblog {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#videoblog video,
+#videoblog iframe {
+    width: 400px;
+}
+
+#videoblog video {
+    padding-top: 50px;
 }
 
 #blogcontent {
@@ -853,6 +931,7 @@ button a {
 #sociale a {
     padding: 0px;
     width: 10%;
+    align-self: center;
 }
 
 footer {
@@ -1064,7 +1143,6 @@ footer button {
 
     #sociale img {
         width: 100%;
-        height: auto;
     }
 
     #sociale a {
@@ -1122,7 +1200,7 @@ footer button {
         grid-area: right2;
         margin: 20px;
         display: flex;
-        justify-content: center;
+        justify-content: flex-start;
         flex-direction: column;
     }
 
@@ -1139,6 +1217,50 @@ footer button {
         display: flex;
         flex-direction: column;
     }
+}
+
+/*_______info-tekst og ikonbilleder på forside tilpasses i breden_*/
+@media only screen and (min-width: 450px) {
+
+    /*__info-tekst___*/
+    #splash #info {
+        width: clamp(400px, 60%, 500px);
+    }
+
+    /*___forside indhold/ikoner___*/
+    #forside {
+        flex-direction: row;
+        width: 100%;
+    }
+
+    #forsideknapper {
+
+        flex-direction: row;
+    }
+
+    #tilmeldknapper {
+        flex-direction: row;
+        width: 100%;
+    }
+
+    #forside img,
+    #tilmeldknapper img {
+        height: auto;
+        width: 170px;
+    }
+
+    .fagartikel {
+        width: auto;
+    }
+
+    .hojcontent #right {
+        height: 350px;
+    }
+
+    #videoforside {
+        flex-basis: 500px;
+    }
+
 }
 
 /*_______info-tekst og ikonbilleder på højskole-siden tilpasses i breden + pris-siden går fra en kollone til to_*/
@@ -1176,36 +1298,14 @@ footer button {
         margin: 10px;
     }
 
-
-
-}
-
-/*_______info-tekst og ikonbilleder på forside tilpasses i breden_*/
-@media only screen and (min-width: 450px) {
-
-    /*__info-tekst___*/
-    #splash #info {
-        width: clamp(400px, 60%, 500px);
-    }
-
-    /*___forside indhold/ikoner___*/
-    #forside {
-        flex-direction: row;
-    }
-
-    #tilmeldknapper {
-        flex-direction: row;
-        width: 100%;
-    }
-
-    #forside img,
-    #tilmeldknapper img {
+    #forside img {
         height: auto;
         width: 200px;
     }
 
-    .fagartikel {
-        width: auto;
-    }
+}
 
+
+.hojcontent #right {
+    height: 200px;
 }

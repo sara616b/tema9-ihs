@@ -26,7 +26,7 @@ function vis(data) {
 
     //indhold i to kolloner indsættes
     document.querySelector("#left").innerHTML = data.content.rendered;
-    document.querySelector("#right").innerHTML = "<img src='" + data.video.guid + "' alt=''>";
+    //document.querySelector("#right").innerHTML = data.video.guid;
 
     //ikoner om fag
     document.querySelector("#fagikoner").innerHTML = "<a href='specialefag.html'><img src='" + data.ikoner[0].guid + "' alt='ikoner'></a>" +
