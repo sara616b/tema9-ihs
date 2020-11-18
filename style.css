@@ -587,7 +587,7 @@ button a {
 
 #content img {
     width: 100%;
-    height: auto;
+    height: 100%;
 }
 
 #personale img {
@@ -669,6 +669,11 @@ button a {
     margin-right: 0;
 }
 
+
+.fagartikel:nth-child(even) h2 {
+    text-align: right;
+}
+
 .fagartikel p,
 .fagartikel h2 {
     padding: 5px 20px;
@@ -737,7 +742,7 @@ button a {
 
 #videoblog video,
 #videoblog iframe {
-    width: 400px;
+    width: 300px;
 }
 
 #videoblog video {
@@ -758,6 +763,7 @@ button a {
     color: white;
     font-family: proxima-nova, sans-serif;
     background-color: #182e5c;
+    width: 100vw;
 }
 
 #blogindhold h3 {
@@ -1261,6 +1267,14 @@ footer button {
         flex-basis: 500px;
     }
 
+    #blogindhold {
+        width: 100%;
+    }
+
+    #videoblog video,
+    #videoblog iframe {
+        width: 400px;
+    }
 }
 
 /*_______info-tekst og ikonbilleder på højskole-siden tilpasses i breden + pris-siden går fra en kollone til to_*/
